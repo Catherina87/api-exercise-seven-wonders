@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us1.locationiq.com/v1/search.php?key=<LOCATION_IQ_KEY>&q=Great%20Pyramid%20of%20Giza
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Mar 2020 22:14:54 GMT
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7ed30cf975ae19274803ae0a764e9c791583878494; expires=Thu, 09-Apr-20
+        22:14:54 GMT; path=/; domain=.locationiq.com; HttpOnly; SameSite=Lax
+      X-Powered-By:
+      - LocationIQ
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5720642f4f30f559-SEA
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <searchresults timestamp='Wed, 11 Mar 20 03:44:54 +0530' attribution='https://locationiq.com/attribution' querystring='Great Pyramid of Giza' polygon='false' exclude_place_ids='82340478,82340504' more_url='https://locationiq.org/static/search.php?q=Great+Pyramid+of+Giza&amp;exclude_place_ids=82340478%2C82340504&amp;format=xml'>
+        <place place_id='82340478' osm_type='way' osm_id='4420397' place_rank='30' boundingbox="29.9781249,29.9801279,31.1330737,31.1354031" lat='29.9791264' lon='31.1342383751015' display_name='Great Pyramid of Giza, Cause way, Kom al Akhdar, Giza, Giza Governorate, 12125, Egypt' class='tourism' type='attraction' importance='0.97746401896696' icon='https://locationiq.org/static/images/mapicons/poi_point_of_interest.p.20.png'/></searchresults>
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 22:14:54 GMT
+recorded_with: VCR 5.1.0
